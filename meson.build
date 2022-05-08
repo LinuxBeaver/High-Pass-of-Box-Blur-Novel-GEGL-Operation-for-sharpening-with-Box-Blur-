@@ -4,13 +4,13 @@ project('high-pass-box', 'c',
 
 # These arguments are only used to build the shared library
 # not the executables that use the library.
-lib_args = ['-DBUILDING_HIGH-PASS-BOX']
+lib_args = ['-DBUILDING_high-pass-box']
 
 gegl = dependency('gegl-0.3', required : false)
 if not gegl.found()
     gegl = dependency('gegl-0.4')
 endif
-shlib = shared_library('high-pass-box', 'high-pass-box.c',
+shlib = shared_library('high-pass-box', 'high-pass-box.c', 'config.h',
   c_args : lib_args,
   dependencies : gegl,
   name_prefix : '',
