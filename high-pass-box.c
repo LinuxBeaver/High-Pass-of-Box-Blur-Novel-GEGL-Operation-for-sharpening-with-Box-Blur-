@@ -24,8 +24,8 @@
 
 property_double (radius, _("radius"), 4.0)
     description (_("Standard deviation (spatial scale factor)"))
-    value_range (0.0, 10000.0)
-    ui_range (0.0, 1000.0)
+    value_range (0.0, 6.0)
+    ui_range (0.0, 6.0)
     ui_gamma (1.5)
 
 property_double (contrast, _("Contrast"), 1.0)
@@ -89,3 +89,5 @@ gegl_op_class_init (GeglOpClass *klass)
 }
 
 #endif
+
+
